@@ -1,0 +1,7 @@
+body{
+  background-color: lightgrey;
+  background: linear-gradient(to right, lightgrey, darkgrey, lightblue);
+}
+h1{
+  text-align: center;
+}
