@@ -9,8 +9,6 @@ var cutMeQ = 'If you cut me, will I bleed?';
 var numQ = 'What number am I thinking of!?';
 var questions = [dogQ, spiritAnimalQ, owlQ, wallsQ, cutMeQ, numQ];
 var answers = ['YES', 'Y', 'YEP', 'YEA', 'NO', 'N', 'NOPE', 'NAH'];
-var tries = 0;
-var triesLeft = 4;
 
 var dog = prompt(questions[0]);
 if (dog.toUpperCase() === answers[0] || answers[1] || answers[2] || answers[3]) {
@@ -65,20 +63,17 @@ if (cutMe.toUpperCase() === answers[0] || answers[1] || answers[2] || answers[3]
   alert(error);
 }
 console.log('Q: ' + cutMeQ);
-//console.log('A: ' + cutMe);
+console.log('A: ' + cutMe);
 
-while (tries < 4) {
-  var numGuess = prompt('Let\'s play a longer guessing game! What number am I thinking of between 1 and 100? You get ' + triesLeft + ' tries!');
-  if (numGuess < 42){
-    tries++;
-    triesLeft--;
-    alert('Too low! Try again!');
-  }else if (numGuess > 42){
-    tries++;
-    triesLeft--;
-    alert('Too high! Try again!');
-  }else {
-    tries = 4;
+var i;
+for (i = 0; i < 4; i++){
+  var numGuess = prompt('Can you guess my favorite number?');
+  if (numGuess === '42'){
     alert('You got it!');
+    i += 5;
+  }else if (i < 3){
+    alert('Not quite! Keep trying!');
+  }else {
+    alert('Sorry, the answer was 42');
   }
 }
