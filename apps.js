@@ -77,7 +77,7 @@ console.log('A: ' + cutMe);
 console.log('Q: Can you guess my favorite number?');
 var triesLeft = 4;
 for (var i = 0; i < 4; i++){
-  var numGuess = prompt(urName + ' can you guess my favorite number?! I\'ll give you ' + triesLeft + ' chances.');
+  var numGuess = prompt(urName + ' can you guess my favorite number?! I\'ll give you FOUR chances. You got ' + triesLeft + ' left.');
   if (numGuess === '42'){
     alert('You got it!');
     numCorrect.push(6);
@@ -98,14 +98,16 @@ console.log('A: ' + numGuess);
 var catNames = ['PRINCESS', 'LITTLE FLUFFY NUGGET', 'BRAT', 'FLUFFBUTT'];
 
 console.log('Q: Can you guess my cats nickname?');
-for (i = 0; i < 6; i++){
-  var catNameGuess = prompt('Can you guess any of the ' + catNames.length + ' nicknames for my cat? I\'ll give you 6 tries ' + urName + '!');
+var triesRem = 6;
+for (var i = 0; i < 6; i++){
+  var catNameGuess = prompt('Can you guess any of the ' + catNames.length + ' nicknames for my cat? I\'ll give you 6 tries ' + urName + '! You have ' + triesRem + ' left!');
   if (catNames.includes(catNameGuess.toUpperCase())){
     alert('Yea it is! I would have also accept ' + catNames + ' .');
     numCorrect.push(7);
     i += 7;
   }else if (i < 5){
     alert('Nope! I definitely don\'t call her that!');
+    triesRem--;
     console.log('A: ' + catNameGuess);
   }else {
     alert('Out of guesses! I would have accepted ' + catNames + ' .');
