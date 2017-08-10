@@ -74,6 +74,7 @@ if (cutMe.toUpperCase() === answers[0] || cutMe.toUpperCase() === answers[1] || 
 console.log('Q: ' + cutMeQ);
 console.log('A: ' + cutMe);
 
+console.log('Q: Can you guess my favorite number?');
 var i;
 for (i = 0; i < 4; i++){
   var numGuess = prompt(urName + ' can you guess my favorite number?!');
@@ -83,15 +84,16 @@ for (i = 0; i < 4; i++){
     i += 5;
   }else if (i < 3){
     alert('Not quite! Keep trying!');
+    console.log('A: ' + numGuess);
   }else {
     alert('Sorry, the answer was 42');
   }
 }
-console.log('Q: Can you guess my favorite number?');
 console.log('A: ' + numGuess);
 
 var catNames = ['PRINCESS', 'LITTLE FLUFFY NUGGET', 'BRAT', 'FLUFFBUTT'];
 
+console.log('Q: Can you guess my cats nickname?');
 for (i = 0; i < 6; i++){
   var catNameGuess = prompt('Can you guess any of the ' + catNames.length + ' nicknames for my cat? I\'ll give you 6 tries ' + urName + '!');
   if (catNames.includes(catNameGuess.toUpperCase())){
@@ -100,11 +102,11 @@ for (i = 0; i < 6; i++){
     i += 7;
   }else if (i < 5){
     alert('Nope! I definitely don\'t call her that!');
+    console.log('A: ' + catNameGuess);
   }else {
     alert('Out of guesses! I would have accepted ' + catNames + ' .');
   }
 }
-console.log('Q: Can you guess my cats nickname?');
 console.log('A: ' + catNameGuess);
 
 alert('Congratulations ' + urName + '! You got to the end of my little question storm! You managed to get ' + numCorrect.length + ' out of 7 correct!');
