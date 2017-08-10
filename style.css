@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 body{
   background-color: lightgrey;
   background: linear-gradient(to right, darkgrey, lightgrey, lightblue);
@@ -5,10 +8,13 @@ body{
 
 h1{
   text-align: center;
+  font-family: 'Lobster' , cursive;
 }
 
 h3{
   text-align: center;
+  font-family: cursive;
+  color: purple;
 }
 
 p{
@@ -17,6 +23,14 @@ p{
 
 img{
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#columns{
+  column-count: 2;
+  border: 4px black double;
+  width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
