@@ -1,17 +1,17 @@
 'use strict';
 
+var urName = prompt('Welcome to my page! What might your name be?');
+alert('Well hello there friend ' + urName + ' thanks for stopping by! We\'re going to have a bit of fun. Prepare to be bombarded with questions!');
+
 var error = 'Not to be bossy but I need a Y/N answer';
-var dogQ = 'Do I have a dog?';
-var spiritAnimalQ = 'Are cats my spirit animal?';
-var owlQ = 'Do I have an owl tattoo?';
-var wallsQ = 'Can I see through walls?';
-var cutMeQ = 'If you cut me, will I bleed?';
+var dogQ = 'Tell me ' + urName + ' do you think I have a dog?';
+var spiritAnimalQ = 'Now ' + urName + ' do you think cats my spirit animal?';
+var owlQ = 'Do I have an owl tattoo, ' + urName + '?';
+var wallsQ = urName + ', can I see through walls?';
+var cutMeQ = 'If you cut me, ' + urName + ', will I bleed?';
 var numQ = 'What number am I thinking of!?';
 var questions = [dogQ, spiritAnimalQ, owlQ, wallsQ, cutMeQ, numQ];
 var answers = ['YES', 'Y', 'YEP', 'YEA', 'NO', 'N', 'NOPE', 'NAH'];
-
-var urName = prompt('Welcome to my page! What might your name be?');
-alert('Well hello there friend ' + urName + ' thanks for stopping by! We\'re going to have a bit of fun. Prepare to be bombarded with questions!');
 
 var dog = prompt(questions[0]);
 if (dog.toUpperCase() === answers[0] || dog.toUpperCase() === answers[1] || dog.toUpperCase() === answers[2] || dog.toUpperCase() === answers[3]) {
