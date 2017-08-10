@@ -82,10 +82,12 @@ for (i = 0; i < 4; i++){
     alert('You got it!');
     numCorrect.push(6);
     i += 5;
-  }else if (i < 3){
-    alert('Not quite! Keep trying!');
+  }else if (i < 3 && parseInt(numGuess) < 42){
+    alert('Too low! Keep trying!');
     console.log('A: ' + numGuess);
-  }else {
+  }else if(i < 3 && parseInt(numGuess) > 42){
+    alert('Too high! Keep trying!');
+  }else{
     alert('Sorry, the answer was 42');
   }
 }
