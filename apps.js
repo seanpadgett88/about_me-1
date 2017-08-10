@@ -75,18 +75,20 @@ console.log('Q: ' + cutMeQ);
 console.log('A: ' + cutMe);
 
 console.log('Q: Can you guess my favorite number?');
-var i;
-for (i = 0; i < 4; i++){
-  var numGuess = prompt(urName + ' can you guess my favorite number?!');
+var triesLeft = 4;
+for (var i = 0; i < 4; i++){
+  var numGuess = prompt(urName + ' can you guess my favorite number?! I\'ll give you ' + triesLeft + ' chances.');
   if (numGuess === '42'){
     alert('You got it!');
     numCorrect.push(6);
     i += 5;
   }else if (i < 3 && parseInt(numGuess) < 42){
     alert('Too low! Keep trying!');
+    triesLeft--;
     console.log('A: ' + numGuess);
   }else if(i < 3 && parseInt(numGuess) > 42){
     alert('Too high! Keep trying!');
+    triesLeft--;
   }else{
     alert('Sorry, the answer was 42');
   }
